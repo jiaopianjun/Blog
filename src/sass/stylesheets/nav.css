@@ -1,0 +1,77 @@
+/* line 1, ../sass/nav.scss */
+.menu {
+  position: absolute;
+  top: 23rem;
+  width: 17rem;
+  padding: 1rem 0;
+  height: auto;
+}
+/* line 7, ../sass/nav.scss */
+.menu ul {
+  width: 100%;
+  height: 100%;
+}
+/* line 10, ../sass/nav.scss */
+.menu ul li {
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+/* line 16, ../sass/nav.scss */
+.menu ul li .icon,
+.menu ul li .icon_h {
+  position: relative;
+  top: -0.2rem;
+  margin-right: 0.7rem;
+}
+/* line 22, ../sass/nav.scss */
+.menu ul li .icon_h {
+  display: none;
+}
+/* line 25, ../sass/nav.scss */
+.menu ul li:hover {
+  background: #fff;
+  color: #1c8a95;
+}
+/* line 28, ../sass/nav.scss */
+.menu ul li:hover .icon {
+  display: none;
+}
+/* line 31, ../sass/nav.scss */
+.menu ul li:hover .icon_h {
+  display: inline-block;
+}
+/* line 36, ../sass/nav.scss */
+.menu ul .current {
+  color: #1c8a95;
+  background: #fff;
+}
+/* line 39, ../sass/nav.scss */
+.menu ul .current .icon {
+  display: none;
+}
+/* line 42, ../sass/nav.scss */
+.menu ul .current .icon_h {
+  display: inline-block;
+}
+
+/* line 48, ../sass/nav.scss */
+.menufix {
+  position: fixed;
+  top: 28rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* line 59, ../sass/nav.scss */
+  .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 65, ../sass/nav.scss */
+  .menu {
+    display: none;
+  }
+}

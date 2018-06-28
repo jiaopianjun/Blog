@@ -1,0 +1,15 @@
+/* line 1, ../sass/index.scss */
+.index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 5, ../sass/index.scss */
+.index .container {
+  position: relative;
+  max-width: 85rem;
+  height: auto;
+  min-height: 50rem;
+  padding: 1rem 0 8rem 0;
+  margin: 0 auto;
+}

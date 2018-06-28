@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* line 1, ../sass/reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input, select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  /*font-size:100%;*/
+  font-style: normal;
+  list-style: none;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 24, ../sass/reset.scss */
+body {
+  /*line-height:1;*/
+}
+
+/* line 28, ../sass/reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 32, ../sass/reset.scss */
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 37, ../sass/reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 41, ../sass/reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 45, ../sass/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 51, ../sass/reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 62, ../sass/reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 68, ../sass/reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 75, ../sass/reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 79, ../sass/reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* line 84, ../sass/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 89, ../sass/reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 98, ../sass/reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 101, ../sass/reset.scss */
+* {
+  outline: none;
+}
+
+/* line 104, ../sass/reset.scss */
+.none {
+  display: none !important;
+}
+
+/* line 107, ../sass/reset.scss */
+.fl {
+  float: left;
+}
+
+/* line 110, ../sass/reset.scss */
+.fr {
+  float: right;
+}
+
+/* line 113, ../sass/reset.scss */
+.cur {
+  cursor: pointer;
+}
+
+/* line 116, ../sass/reset.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 119, ../sass/reset.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* line 127, ../sass/reset.scss */
+.app {
+  width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  color: #656565;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Microsoft YaHei";
+}
+
+/* line 137, ../sass/reset.scss */
+body {
+  background: rgba(237, 237, 237, 0.6);
+}
+/* line 138, ../sass/reset.scss */
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+/* line 142, ../sass/reset.scss */
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 148, ../sass/reset.scss */
+body:hover::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* line 156, ../sass/reset.scss */
+html {
+  font-size: 62.5%;
+  /*10 梅 16 脳 100% = 62.5%*/
+}
+
+/* line 157, ../sass/reset.scss */
+body {
+  font-size: 1.4rem;
+  /*1.4 脳 10px = 14px */
+}
+
+/* line 158, ../sass/reset.scss */
+h1 {
+  font-size: 2.4rem;
+  /*2.4 脳 10px = 24px*/
+}
+
+/* line 160, ../sass/reset.scss */
+.text-ellipsisl {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 166, ../sass/reset.scss */
+.more-ellipsisl {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
