@@ -31,7 +31,7 @@
               Javascript
             </a>
             <a href="javascript:;" class="article-tag-list-item">
-              Vue
+              日记
             </a>
             <a href="javascript:;" class="article-tag-list-item">
               日记

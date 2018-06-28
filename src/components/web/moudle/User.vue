@@ -24,23 +24,29 @@
       </div>
       <nav class="menu" id="navmenu">
         <ul>
-           <li class="cur current">
-             <icon name="home" :w="24" :h="24" class="icon"></icon>
-             <icon name="home_h" :w="24" :h="24" class="icon_h"></icon>
-             <icon name="home_w" :w="24" :h="24" class="icon_w"></icon>
-              Home
+           <li class="cur" :class="{'current' : isContTab === 0 }" @click="clickTab(0)">
+              <router-link :to="{name:'index', params: {}}">
+                <icon name="home" :w="24" :h="24" class="icon"></icon>
+                <icon name="home_h" :w="24" :h="24" class="icon_h"></icon>
+                <icon name="home_w" :w="24" :h="24" class="icon_w"></icon>
+                Home
+              </router-link>
            </li>
-           <li class="cur">
-             <icon name="label" :w="22" :h="22" class="icon"></icon>
-             <icon name="label_h" :w="22" :h="22" class="icon_h"></icon>
-             <icon name="label_w" :w="22" :h="22" class="icon_w"></icon>
-              Article
+           <li class="cur" :class="{'current' : isContTab === 1 }" @click="clickTab(1)">
+              <router-link :to="{name:'label', params: {}}">
+                <icon name="label" :w="22" :h="22" class="icon"></icon>
+                <icon name="label_h" :w="22" :h="22" class="icon_h"></icon>
+                <icon name="label_w" :w="22" :h="22" class="icon_w"></icon>
+                Article
+              </router-link>
            </li>
-           <li class="cur">
-             <icon name="about" :w="23" :h="23" class="icon"></icon>
-             <icon name="about_h" :w="23" :h="23" class="icon_h"></icon>
-             <icon name="about_w" :w="23" :h="23" class="icon_w"></icon>
-             About
+           <li class="cur" :class="{'current' : isContTab === 2 }" @click="clickTab(2)">
+              <router-link :to="{name:'about', params: {}}">
+                <icon name="about" :w="23" :h="23" class="icon"></icon>
+                <icon name="about_h" :w="23" :h="23" class="icon_h"></icon>
+                <icon name="about_w" :w="23" :h="23" class="icon_w"></icon>
+                About
+              </router-link>
            </li>
         </ul>
         <div id="sns-links" class="sns-links">
@@ -72,7 +78,8 @@ export default {
       scrolled: false,
       isscroll: false,
       ispt: 'pc',
-      hide:false
+      hide: false,
+      isContTab: this.$store.state.menu.tab
     }
   },
   watch:{
@@ -80,11 +87,18 @@ export default {
       this.hide = this.$store.state.menu.status
       $(".slide_animate").css('left','0')
     },
+    "$store.state.menu.tab":function(){
+      this.isContTab = this.$store.state.menu.tab
+    },
   },
   ready () {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods:{
+    clickTab:function(s){
+       this.isContTab = s
+       this.$store.commit('menustate',{status:true,tab:s})
+    },
     handleScroll () {
       this.scrolled = window.scrollY
       this.ispt = $(".app").attr('data-mobile')
