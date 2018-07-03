@@ -1,0 +1,156 @@
+.about{
+  padding:0rem 0 0 18rem;
+  height:auto;
+  min-height:30rem;
+  border: 0.1rem solid #f1f1f1;
+  p{
+    background:#fff;
+    height:3rem;
+    line-height:3rem;
+    font-size:2.5rem;
+    padding:1rem 2rem;
+    text-align:center;
+    margin-bottom:1rem;
+    .icon{
+      position:relative;
+      margin-right:0.8rem;
+      top:-0.2rem;
+    }
+  }
+  .about-cont{
+    background:#fff;
+    padding:1rem;
+    min-height:42rem;
+    .me{
+      padding:4rem;
+      color:#666;
+      font-size:2.2rem;
+    }
+    .yy{
+      text-align:right;
+    }
+    .title{
+      text-align:left;
+      font-size:1.9rem;
+      margin-top:10rem;
+    }
+    .contact{
+      padding:0rem 2rem 0 2rem;
+      text-align:center;
+      a{
+        position:relative;
+        display:inline-block;
+        width:5rem;
+        height:5rem;
+        background:#aa44aa;
+        margin:1rem 1.5rem;
+        -webkit-tap-highlight-color:transparent;
+        &:hover{
+          &:after{
+            opacity:1;
+            z-index:0;
+          }
+        }
+      }
+      .weixin,
+      .wxpb,
+      .qq{
+        &:after{
+          content: "";
+          position: absolute;
+          width: 18rem;
+          height:18rem;
+          top:-19rem;
+          left:50%;
+          margin-left:-9rem;
+          -webkit-transition: all .3s linear;
+          transition: all .3s linear;
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      .weixin{
+        background:url(./../../images/wechat.png) no-repeat center;
+        &:after{
+          background:url(./../../images/wxh.png) no-repeat center;
+        }
+      }
+      .wxpb{
+        background:url(./../../images/wxpb.png) no-repeat center;
+        &:after{
+          background:url(./../../images/wxpbh.png) no-repeat center;
+        }
+      }
+      .qq{
+        background:url(./../../images/qq.png) no-repeat center;
+        &:after{
+          background:url(./../../images/qqh.png) no-repeat center;
+        }
+      }
+      .email{
+        background:url(./../../images/email.png) no-repeat center;
+      }
+      .ins{
+        background:url(./../../images/ins.png) no-repeat center;
+      }
+      .nice{
+        background:url(./../../images/nice.png) no-repeat center;
+        background-size:4.5rem 4.5rem !important;
+      }
+      .weixin,
+      .wxpb,
+      .qq,
+      .email,
+      .ins,
+      .nice{
+        background-size:contain;
+        &:after{
+          background-size:contain;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:1024px) and (max-width:1920px) {
+
+}
+@media screen and (max-width: 1366px){
+
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .about{
+    .about-cont{
+      height:51rem;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .about{
+    padding:0;
+    .about-cont{
+      .me{
+        padding:4rem 2rem;
+      }
+      .yy{
+        font-size:1.8rem;
+      }
+      .title{
+        margin-top:2rem;
+      }
+      .contact{
+        max-width:90%;
+        margin:0 auto;
+        // overflow:hidden;
+        a{
+          margin:1rem 1.4rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 736px){
+
+}
+@media screen and (max-width: 414px){
+
+}

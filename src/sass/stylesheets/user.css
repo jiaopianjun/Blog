@@ -279,43 +279,42 @@
 }
 /* line 163, ../sass/user.scss */
 .menu ul li {
+  position: relative;
+  z-index: 4;
+  height: 4rem;
+  margin-bottom: 1rem;
+  z-index: 5;
+}
+/* line 169, ../sass/user.scss */
+.menu ul li a {
+  display: inline-block;
+  width: 15rem;
+  color: #808080;
   height: 2rem;
   line-height: 2rem;
   padding: 1rem;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
-/* line 169, ../sass/user.scss */
+/* line 178, ../sass/user.scss */
 .menu ul li .icon,
 .menu ul li .icon_h,
 .menu ul li .icon_w {
   position: relative;
-  top: 0rem;
+  top: -0.1rem;
   margin-right: 0.7rem;
 }
-/* line 176, ../sass/user.scss */
+/* line 185, ../sass/user.scss */
 .menu ul li .icon_h,
 .menu ul li .icon_w {
   display: none;
 }
-/* line 180, ../sass/user.scss */
-.menu ul li:hover {
+/* line 190, ../sass/user.scss */
+.menu ul .current {
   background: #fff;
-  color: #ff6f3d;
-}
-/* line 183, ../sass/user.scss */
-.menu ul li:hover .icon,
-.menu ul li:hover .icon_w {
-  display: none;
-}
-/* line 187, ../sass/user.scss */
-.menu ul li:hover .icon_h {
-  display: inline-block;
 }
 /* line 192, ../sass/user.scss */
-.menu ul .current {
+.menu ul .current a {
   color: #ff6f3d;
-  background: #fff;
 }
 /* line 195, ../sass/user.scss */
 .menu ul .current .icon {
@@ -336,14 +335,33 @@
   top: 6rem;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  /* line 215, ../sass/user.scss */
+  .menu ul li:hover {
+    background: #fff;
+  }
+  /* line 217, ../sass/user.scss */
+  .menu ul li:hover a {
+    color: #ff6f3d;
+  }
+  /* line 220, ../sass/user.scss */
+  .menu ul li:hover .icon,
+  .menu ul li:hover .icon_w {
+    display: none;
+  }
+  /* line 224, ../sass/user.scss */
+  .menu ul li:hover .icon_h {
+    display: inline-block;
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* line 218, ../sass/user.scss */
+  /* line 236, ../sass/user.scss */
   .slide {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 223, ../sass/user.scss */
+  /* line 241, ../sass/user.scss */
   .slide {
     position: fixed;
     top: 0;
@@ -351,7 +369,7 @@
     height: 100%;
     z-index: 12;
   }
-  /* line 229, ../sass/user.scss */
+  /* line 247, ../sass/user.scss */
   .slide .slide_animate {
     position: relative;
     width: 20rem;
@@ -359,7 +377,7 @@
     transition: all .5s linear;
     z-index: 13;
   }
-  /* line 236, ../sass/user.scss */
+  /* line 254, ../sass/user.scss */
   .slide .mask {
     display: inline-block;
     position: absolute;
@@ -371,30 +389,30 @@
     background: rgba(0, 0, 0, 0.5);
     transition: all 0.8s linear;
   }
-  /* line 247, ../sass/user.scss */
+  /* line 265, ../sass/user.scss */
   .slide .maskshow {
     animation: mymove 0.5s forwards 0.6s;
   }
-  /* line 250, ../sass/user.scss */
+  /* line 268, ../sass/user.scss */
   .slide .showmenu {
     transform: translateX(0%);
   }
-  /* line 253, ../sass/user.scss */
+  /* line 271, ../sass/user.scss */
   .slide .hidemenu {
     transform: translateX(-100%);
   }
 
-  /* line 257, ../sass/user.scss */
+  /* line 275, ../sass/user.scss */
   .showmenu {
     transform: translateX(0%);
   }
 
-  /* line 260, ../sass/user.scss */
+  /* line 278, ../sass/user.scss */
   .hidemenu {
     transform: translateX(-100%);
   }
 
-  /* line 263, ../sass/user.scss */
+  /* line 281, ../sass/user.scss */
   .user,
   .menu {
     position: relative;
@@ -404,66 +422,73 @@
     padding: 0;
   }
 
-  /* line 271, ../sass/user.scss */
+  /* line 289, ../sass/user.scss */
   .user {
     min-height: 10rem;
     height: auto;
     border: none;
   }
-  /* line 275, ../sass/user.scss */
+  /* line 293, ../sass/user.scss */
   .user .user_head {
     width: 5rem;
     height: 5rem;
     padding-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  /* line 282, ../sass/user.scss */
+  /* line 300, ../sass/user.scss */
   .user .sns-links a {
     display: none;
   }
 
-  /* line 287, ../sass/user.scss */
+  /* line 305, ../sass/user.scss */
   .menu {
     height: 100%;
   }
-  /* line 289, ../sass/user.scss */
+  /* line 307, ../sass/user.scss */
   .menu ul {
     width: 100%;
     height: 100%;
   }
-  /* line 292, ../sass/user.scss */
+  /* line 310, ../sass/user.scss */
   .menu ul li {
+    height: 5rem;
+    line-height: 5rem;
+  }
+  /* line 313, ../sass/user.scss */
+  .menu ul li a {
+    position: relative;
+    z-index: 2;
     height: 3rem;
     line-height: 3rem;
-    padding-left: 1.5rem;
-    font-size: 1.4rem;
-    margin-bottom: 0rem;
+    width: 19rem;
+    font-size: 1.6rem;
+    padding-left: 2rem;
   }
-  /* line 299, ../sass/user.scss */
-  .menu ul .current {
+  /* line 324, ../sass/user.scss */
+  .menu ul .current a {
     color: #fff;
     background: #ff6f3d;
   }
-  /* line 302, ../sass/user.scss */
-  .menu ul .current .icon, .menu ul .current .icon_h {
+  /* line 327, ../sass/user.scss */
+  .menu ul .current a .icon, .menu ul .current a .icon_h {
     display: none;
   }
-  /* line 305, ../sass/user.scss */
-  .menu ul .current .icon_w {
+  /* line 330, ../sass/user.scss */
+  .menu ul .current a .icon_w {
     display: inline-block;
   }
-  /* line 310, ../sass/user.scss */
+  /* line 336, ../sass/user.scss */
   .menu .sns-links {
     display: inline-block;
     position: fixed;
     bottom: 0.5rem;
     width: 20rem;
   }
-  /* line 315, ../sass/user.scss */
+  /* line 341, ../sass/user.scss */
   .menu .sns-links a {
     margin: 0 0.45rem;
   }
-  /* line 318, ../sass/user.scss */
+  /* line 344, ../sass/user.scss */
   .menu .sns-links .iconfont {
     font-size: 3rem;
   }

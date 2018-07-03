@@ -1,5 +1,5 @@
 <template>
-  <div class="article" id="at">
+  <div class="article markdown-body" id="at">
    
   </div>
 </template>

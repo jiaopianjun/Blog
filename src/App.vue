@@ -1,12 +1,29 @@
 <template>
   <div class="app" id="app" :data-mobile="ismobile" :class="ismobile">
-    <router-view :key="key"></router-view>
+  <div class="index web mobile">
+     <Hd></Hd>
+     <div class="container">
+       <User></User>
+       <router-view :key="key"></router-view>
+      </div>
+      <Footer></Footer>
+  </div>
   </div>
 </template>
 
 <script>
+import Hd from './components/web/moudle/Hd.vue'
+import GoTop from './components/web/moudle/GoTop.vue'
+import Footer from './components/web/moudle/Footer.vue'
+import User from './components/web/moudle/User.vue'
 export default {
   name: 'app',
+  components: {
+    Hd: Hd,
+    GoTop: GoTop,
+    Footer: Footer,
+    User: User,
+  },
   computed: {
     key () {
       return this.$route.name !== undefined ? this.$route.name + +new Date() : this.$route + +new Date()

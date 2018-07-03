@@ -221,3 +221,19 @@ h1 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+/* line 173, ../sass/reset.scss */
+.index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 177, ../sass/reset.scss */
+.index .container {
+  position: relative;
+  max-width: 85rem;
+  height: auto;
+  min-height: 50rem;
+  padding: 1rem 0 8rem 0;
+  margin: 0 auto;
+}

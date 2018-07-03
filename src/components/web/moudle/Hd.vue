@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     showmobielmenu:function(){
-      this.$store.commit('menustate',{status:true})
+      this.$store.commit('menustate',{status:true,tab:this.$store.state.menu.tab})
     },
     handleScroll () {
       this.scrolled = window.scrollY

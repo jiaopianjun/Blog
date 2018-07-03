@@ -24,8 +24,8 @@
       </div>
       <nav class="menu" id="navmenu">
         <ul>
-           <li class="cur" :class="{'current' : isContTab === 0 }" @click="clickTab(0)">
-              <router-link :to="{name:'index', params: {}}">
+           <li class="cur" :class="{'current' : isContTab === 0 }">
+              <router-link :to="{name:'home', params: {}}" @click.native="clickTab(0)">
                 <icon name="home" :w="24" :h="24" class="icon"></icon>
                 <icon name="home_h" :w="24" :h="24" class="icon_h"></icon>
                 <icon name="home_w" :w="24" :h="24" class="icon_w"></icon>
@@ -33,15 +33,15 @@
               </router-link>
            </li>
            <li class="cur" :class="{'current' : isContTab === 1 }" @click="clickTab(1)">
-              <router-link :to="{name:'label', params: {}}">
+              <router-link :to="{name:'label', params: {}}" @click.native="clickTab(1)">
                 <icon name="label" :w="22" :h="22" class="icon"></icon>
                 <icon name="label_h" :w="22" :h="22" class="icon_h"></icon>
                 <icon name="label_w" :w="22" :h="22" class="icon_w"></icon>
                 Article
               </router-link>
            </li>
-           <li class="cur" :class="{'current' : isContTab === 2 }" @click="clickTab(2)">
-              <router-link :to="{name:'about', params: {}}">
+           <li class="cur" :class="{'current' : isContTab === 2 }">
+              <router-link :to="{name:'about', params: {}}" @click.native="clickTab(2)">
                 <icon name="about" :w="23" :h="23" class="icon"></icon>
                 <icon name="about_h" :w="23" :h="23" class="icon_h"></icon>
                 <icon name="about_w" :w="23" :h="23" class="icon_w"></icon>
@@ -85,7 +85,7 @@ export default {
   watch:{
     "$store.state.menu.status":function(){
       this.hide = this.$store.state.menu.status
-      $(".slide_animate").css('left','0')
+      // $(".slide_animate").css('left','0')
     },
     "$store.state.menu.tab":function(){
       this.isContTab = this.$store.state.menu.tab
@@ -95,9 +95,12 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods:{
-    clickTab:function(s){
-       this.isContTab = s
-       this.$store.commit('menustate',{status:true,tab:s})
+    clickTab:function(s,name){
+      this.isContTab = s
+      this.$store.commit('menustate',{status:true,tab:s})
+      if(this.ispt === 'mobile'){
+        this.hidemenu()
+      }
     },
     handleScroll () {
       this.scrolled = window.scrollY
@@ -118,23 +121,31 @@ export default {
     },
     hidemenu:function(){
       var _this = this
-      $(".slide_animate").animate({
-        left:'-100%'
-      },function(){
-        setTimeout(function(){
+      // $(".slide_animate").animate({
+      //   left:'-100%'
+      // },function(){
+      //   setTimeout(function(){
           _this.hide = false
-          _this.$store.commit('menustate',{status:false})
-        },300)
-      })
+          _this.$store.commit('menustate',{status:false,tab:_this.$store.state.menu.tab})
+      //   },300)
+      // })
     }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   mounted () {
+    this.ispt = $(".app").attr('data-mobile')
   },
   created: function () {
     window.addEventListener('scroll', this.handleScroll)
+    if(this.$route.path === '/label'){
+      this.isContTab = 1
+    }else if(this.$route.path === '/about'){
+      this.isContTab = 2
+    }else{
+      this.isContTab = 0
+    }
   }
 }
 </script>

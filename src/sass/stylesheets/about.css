@@ -1,0 +1,170 @@
+/* line 1, ../sass/about.scss */
+.about {
+  padding: 0rem 0 0 18rem;
+  height: auto;
+  min-height: 30rem;
+  border: 0.1rem solid #f1f1f1;
+}
+/* line 6, ../sass/about.scss */
+.about p {
+  background: #fff;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* line 14, ../sass/about.scss */
+.about p .icon {
+  position: relative;
+  margin-right: 0.8rem;
+  top: -0.2rem;
+}
+/* line 20, ../sass/about.scss */
+.about .about-cont {
+  background: #fff;
+  padding: 1rem;
+  min-height: 42rem;
+}
+/* line 24, ../sass/about.scss */
+.about .about-cont .me {
+  padding: 4rem;
+  color: #666;
+  font-size: 2.2rem;
+}
+/* line 29, ../sass/about.scss */
+.about .about-cont .yy {
+  text-align: right;
+}
+/* line 32, ../sass/about.scss */
+.about .about-cont .title {
+  text-align: left;
+  font-size: 1.9rem;
+  margin-top: 10rem;
+}
+/* line 37, ../sass/about.scss */
+.about .about-cont .contact {
+  padding: 0rem 2rem 0 2rem;
+  text-align: center;
+}
+/* line 40, ../sass/about.scss */
+.about .about-cont .contact a {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background: #aa44aa;
+  margin: 1rem 1.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 49, ../sass/about.scss */
+.about .about-cont .contact a:hover:after {
+  opacity: 1;
+  z-index: 0;
+}
+/* line 58, ../sass/about.scss */
+.about .about-cont .contact .weixin:after,
+.about .about-cont .contact .wxpb:after,
+.about .about-cont .contact .qq:after {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  top: -19rem;
+  left: 50%;
+  margin-left: -9rem;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+  z-index: -1;
+}
+/* line 72, ../sass/about.scss */
+.about .about-cont .contact .weixin {
+  background: url(./../../images/wechat.png) no-repeat center;
+}
+/* line 74, ../sass/about.scss */
+.about .about-cont .contact .weixin:after {
+  background: url(./../../images/wxh.png) no-repeat center;
+}
+/* line 78, ../sass/about.scss */
+.about .about-cont .contact .wxpb {
+  background: url(./../../images/wxpb.png) no-repeat center;
+}
+/* line 80, ../sass/about.scss */
+.about .about-cont .contact .wxpb:after {
+  background: url(./../../images/wxpbh.png) no-repeat center;
+}
+/* line 84, ../sass/about.scss */
+.about .about-cont .contact .qq {
+  background: url(./../../images/qq.png) no-repeat center;
+}
+/* line 86, ../sass/about.scss */
+.about .about-cont .contact .qq:after {
+  background: url(./../../images/qqh.png) no-repeat center;
+}
+/* line 90, ../sass/about.scss */
+.about .about-cont .contact .email {
+  background: url(./../../images/email.png) no-repeat center;
+}
+/* line 93, ../sass/about.scss */
+.about .about-cont .contact .ins {
+  background: url(./../../images/ins.png) no-repeat center;
+}
+/* line 96, ../sass/about.scss */
+.about .about-cont .contact .nice {
+  background: url(./../../images/nice.png) no-repeat center;
+  background-size: 4.5rem 4.5rem !important;
+}
+/* line 100, ../sass/about.scss */
+.about .about-cont .contact .weixin,
+.about .about-cont .contact .wxpb,
+.about .about-cont .contact .qq,
+.about .about-cont .contact .email,
+.about .about-cont .contact .ins,
+.about .about-cont .contact .nice {
+  background-size: contain;
+}
+/* line 107, ../sass/about.scss */
+.about .about-cont .contact .weixin:after,
+.about .about-cont .contact .wxpb:after,
+.about .about-cont .contact .qq:after,
+.about .about-cont .contact .email:after,
+.about .about-cont .contact .ins:after,
+.about .about-cont .contact .nice:after {
+  background-size: contain;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 122, ../sass/about.scss */
+  .about .about-cont {
+    height: 51rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 128, ../sass/about.scss */
+  .about {
+    padding: 0;
+  }
+  /* line 131, ../sass/about.scss */
+  .about .about-cont .me {
+    padding: 4rem 2rem;
+  }
+  /* line 134, ../sass/about.scss */
+  .about .about-cont .yy {
+    font-size: 1.8rem;
+  }
+  /* line 137, ../sass/about.scss */
+  .about .about-cont .title {
+    margin-top: 2rem;
+  }
+  /* line 140, ../sass/about.scss */
+  .about .about-cont .contact {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  /* line 144, ../sass/about.scss */
+  .about .about-cont .contact a {
+    margin: 1rem 1.4rem;
+  }
+}
