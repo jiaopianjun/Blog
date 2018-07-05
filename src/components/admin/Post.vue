@@ -1,7 +1,7 @@
 <template>
   <div class="post" id="post">
     <router-link :to="{name:'admin', params: {}}">返回管理页面</router-link>
-    <mavon-editor v-model="value" :ishljs="true"/>
+    <mavon-editor :ishljs = "true"></mavon-editor>
   </div>
 </template>
 

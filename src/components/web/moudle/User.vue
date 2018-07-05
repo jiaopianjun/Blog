@@ -33,11 +33,11 @@
               </router-link>
            </li>
            <li class="cur" :class="{'current' : isContTab === 1 }" @click="clickTab(1)">
-              <router-link :to="{name:'label', params: {}}" @click.native="clickTab(1)">
+              <router-link :to="{name:'Entrance', params: {}}" @click.native="clickTab(1)">
                 <icon name="label" :w="22" :h="22" class="icon"></icon>
                 <icon name="label_h" :w="22" :h="22" class="icon_h"></icon>
                 <icon name="label_w" :w="22" :h="22" class="icon_w"></icon>
-                Article
+                Entrance
               </router-link>
            </li>
            <li class="cur" :class="{'current' : isContTab === 2 }">
@@ -121,14 +121,8 @@ export default {
     },
     hidemenu:function(){
       var _this = this
-      // $(".slide_animate").animate({
-      //   left:'-100%'
-      // },function(){
-      //   setTimeout(function(){
-          _this.hide = false
-          _this.$store.commit('menustate',{status:false,tab:_this.$store.state.menu.tab})
-      //   },300)
-      // })
+      _this.hide = false
+      _this.$store.commit('menustate',{status:false,tab:_this.$store.state.menu.tab})
     }
   },
   destroyed () {
@@ -139,12 +133,17 @@ export default {
   },
   created: function () {
     window.addEventListener('scroll', this.handleScroll)
-    if(this.$route.path === '/label'){
+    var str = this.$route.path,
+        _this = this;
+    if(this.$route.path === '/Entrance' || str.indexOf('tags') != -1 || str.indexOf('label') != -1){
       this.isContTab = 1
+      _this.$store.commit('menustate',{status:false,tab:1})
     }else if(this.$route.path === '/about'){
       this.isContTab = 2
+      _this.$store.commit('menustate',{status:false,tab:2})
     }else{
       this.isContTab = 0
+      _this.$store.commit('menustate',{status:false,tab:0})
     }
   }
 }

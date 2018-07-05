@@ -4,7 +4,7 @@
       <section class="hd-nav-container">
         <div class="hd-icon cur fl">
           <span class="icon-img fl"></span>
-          <span class="icon-name">故事胶片</span>
+          <a href="/" class="icon-name">故事胶片</a>
         </div>
         <span class="mobile-menu" @click="showmobielmenu">
           <img src="http://jiaopianjun.cc/assets/blogImg/hd.gif"/>
