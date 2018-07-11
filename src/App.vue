@@ -4,7 +4,9 @@
      <Hd></Hd>
      <div class="container">
        <User></User>
-       <router-view :key="key"></router-view>
+       <keep-alive>
+          <router-view :key="key"></router-view>
+       </keep-alive>
       </div>
       <Footer></Footer>
   </div>
